@@ -36,11 +36,46 @@ function login(username, password){
         }
     } else {
         return "Username not found"
-    }
+    } 
+    
+    
+       
+   
 }
 
+function register(newusername, newpassword, newname, newemail) {
+    //TODO: Check if username exist
+    
+    let matched = dbUsers.find(element => 
+    element.username == newusername)
+    if(matched){
+        console.log("Username already exist")
+    }else { console.log("push successfully")
+
+    dbUsers.push({
+        username : newusername,
+        password: newpassword,
+        name: newname,
+        email: newemail
+        
+    })    }
+    
+   
+   
+    
+}
+
+
+
 // try to login
-console.log( login("deen", "12345678") )
-console.log( login("deen", "123456") )
-console.log( login("den", "12345678") )
+//console.log( login("deen", "12345678") )
+//console.log( login("deen", "123456") )
+//console.log( login("den", "12345678") )
+console.log( login("idham", "9999") )
+
+register("idham", "9999", "Idham", "idham@gmail.com")
+register("idham", "9999", "Idham", "idham@gmail.com")
+register("idham", "9999", "Idham", "idham@gmail.com")
+register("idham", "9999", "Idham", "idham@gmail.com")
+console.log( login("idham", "9999") )
 
