@@ -38,9 +38,6 @@ function login(username, password){
         return "Username not found"
     } 
     
-    
-       
-   
 }
 
 function register(newusername, newpassword, newname, newemail) {
@@ -60,12 +57,7 @@ function register(newusername, newpassword, newname, newemail) {
         
     })    }
     
-   
-   
-    
 }
-
-
 
 // try to login
 //console.log( login("deen", "12345678") )
